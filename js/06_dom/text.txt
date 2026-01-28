@@ -1,0 +1,34 @@
+1.innerHTML: returns all html nodes 
+2.textContent : returns all text content
+3.innerText : gives the text in the selected node
+4.querySelector
+5.querySelectorAll
+6.getAttribute
+7.setAttribute
+8.getElemtById
+9.getElemtByClass
+
+Understanding the Document Object Model (DOM) is crucial for cracking interviews and React development
+Learn how to create new elements in the DOM using JavaScript
+Select the parent element and find out what values are inside it
+Accessing and manipulating elements in the DOM using inner HTML
+You can select the parent element using querySelector method in JavaScript
+The DOM represents the HTML document as a tree structure
+How to programmatically create a new element in DOM
+Creating a new element inside the dev variable
+To attach a child element to the DOM, use the document to specify the parent element.
+Creating a text node with a value in DOM
+The video ends and invites viewers to watch the next one.
+
+
+In this final video, we will create and modify elements in the DOM using JavaScript
+Reduce DOM elements by adding list items using JavaScript function
+Creating and adding elements to the DOM
+How to edit and remove elements in DOM using chai and JavaScript
+Creating and manipulating DOM elements in JavaScript
+Optimized approach to edit and remove elements in DOM
+The video discusses how to edit and remove elements in the DOM using JavaScript
+Different ways to add and replace content in a DOM
+Replacing elements in DOM using innerHTML and querySelector
+Methods to edit and remove elements in DOM using JavaScript
+Learn how to edit and remove elements in DOM
