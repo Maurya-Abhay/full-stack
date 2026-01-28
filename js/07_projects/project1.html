@@ -1,0 +1,66 @@
+<html>
+
+<head>
+    <title>Project 1</title>
+</head>
+<style>
+    body{
+        margin: 10rem;
+    }
+    #main-div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px
+    }
+
+    .box {
+        height: 120px;
+        width: 120px;
+        border: 2px solid rgb(7, 7, 7);
+        border-radius: 2px;
+    }
+</style>
+
+<body>
+    <h2>Hello Click any box to change background color</h2>
+    <dov id="main-div">
+        <div style="background-color:grey" id="grey" class="box"></div>
+        <div style="background-color:yellow" id="yellow" class="box"></div>
+        <div style="background-color:blue" id="blue" class="box"></div>
+        <div style="background-color:purple" id="purple" class="box"></div>
+        <div style="background-color:rgb(18, 16, 16)" id="black" class="box"></div>
+    </dov>
+
+    <script>
+        const box = document.querySelectorAll('.box');
+        const body = document.querySelector('body');
+
+        box.forEach(function (box) {
+            box.addEventListener('click', function (e) {
+                console.log(e.target.id)
+                switch (e.target.id) {
+                    case "grey":
+                        body.style.backgroundColor = e.target.id
+                        break;
+                    case "yellow":
+                        body.style.backgroundColor = e.target.id
+                        break;
+                    case "blue":
+                        body.style.backgroundColor = e.target.id
+                        break;
+                    case "purple":
+                        body.style.backgroundColor = e.target.id
+                        break;
+                    case "black":
+                        body.style.backgroundColor = e.target.id
+                        break;
+                    default:
+                        console.log("Invalid box selected");
+                }
+            })
+        })
+    </script>
+</body>
+
+</html>

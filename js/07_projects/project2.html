@@ -1,0 +1,81 @@
+<html>
+
+<head>
+    <title>Project 2</title>
+</head>
+<style>
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #main-div {
+        border: 2px solid black;
+        height: 400px;
+        width: 300px;
+        padding: 20px
+    }
+    #result{
+        background-color: rgb(9, 48, 222);
+        padding: 4px;
+    }
+    #suggesion{
+        background-color: yellow;
+        padding: 4px;
+    }
+</style>
+
+<body>
+    <div id="main-div">
+        <h2>Body Mass Index Calculator</h2>
+        <form>
+            <p>
+                <level>Enter Height in Meter: <input id="height" type="text"></level>
+            </p>
+            <p>
+                <level>Enter Weight in KG: <input id="weight" type="text"></level>
+            </p>
+            <button id="submit">Submit</button>
+            <div id="result">0</div>
+            <div id="suggesion">0</div>
+        </form>
+    </div>
+
+    <script>
+        const form = document.querySelector('form');
+
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const height = parseFloat(document.querySelector('#height').value)
+            const weight = parseFloat(document.querySelector('#weight').value)
+            const result = document.querySelector('#result')
+            const suggesion = document.querySelector('#suggesion')
+
+            if (height === '' || height <= 0 || isNaN(height)) {
+                result.innerHTML = `Invaild Height input ${height}`
+            } else if (weight === '' || weight <= 0 || isNaN(weight)) {
+                result.innerHTML = `Invaild Weight input ${weight}`
+            } else {
+                const bmi = weight / (height * height);
+                result.innerHTML = bmi;
+            }
+            if(result.innerHTML <= 18.5){
+                suggesion.innerHTML = `You are Underweight your BMI is ${result.innerHTML} less then 18.5 `
+            }
+            else if(result.innerHTML >= 18.5 && result.innerHTML <= 24.9){
+                suggesion.innerHTML = `You are Normal your BMI is ${result.innerHTML} exist under 24.9 `
+            }
+            else if(result.innerHTML >= 25 && result.innerHTML <= 29.9){
+                suggesion.innerHTML = `You are Overweight your BMI is ${result.innerHTML} exist under 29.9`
+            }
+            else if(result.innerHTML >= 30){
+                suggesion.innerHTML = `You are Obese your BMI is ${result.innerHTML} out of 30`
+            }
+        })
+
+    </script>
+</body>
+
+</html>

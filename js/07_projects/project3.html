@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>Project 3</title>
+    </head>
+    <style>
+        #root{
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        p{
+            background-color: purple;
+            padding: 10px;
+            border-radius: 4px;
+            color: white;
+        }
+    </style>
+    <body>
+        <div id="root">
+            <h2>Live Timing: </h2>
+            <p id="time">0</p>
+        </div>
+
+        <script>
+            const time = document.getElementById('time')
+
+            setInterval(function(){
+                let date = new Date()
+                time.innerHTML = date.toLocaleTimeString();
+            }, 1000)
+        </script>
+    </body>
+</html>
