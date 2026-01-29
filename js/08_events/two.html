@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Events | Two</title>
+    </head>
+    <body>
+        <h2 id="text">Hello Javascript</h2>
+        <button id="stop">click</button>
+    </body>
+    <script>
+        const changeText = function(){
+        document.getElementById('text').innerHTML = 'Hello Abhay';
+        }
+
+        let chnged = setTimeout(changeText, 2000)
+
+        document.getElementById('stop').addEventListener('click', function(){
+            clearTimeout(chnged);
+            console.log("STOPED");
+        })
+        
+
+        //setTimeout(function(){console.log("hello ji")}, 2000)
+    </script>
+</html>

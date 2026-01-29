@@ -1,0 +1,79 @@
+<html>
+
+<head>
+    <title>Events | One</title>
+</head>
+<style>
+    #root {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+    }
+
+    .box {
+        height: 100px;
+        width: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid black;
+        border-radius: 3px;
+        font-size: 20px;
+    }
+</style>
+
+<body>
+    <h2>click any div to set events</h2>
+    <div id="root">
+        <div class="box" id="box1">1</div>
+        <div class="box" id="box2">2</div>
+        <div class="box" id="box3">3</div>
+        <div class="box" id="box4">4</div>
+        <div class="box" id="box5" onClick="alert('This is inline event and its old model')">5</div>
+        <div class="box" id="google"><a href="https://www.google.com/">Google</a></div>
+    </div>
+</body>
+<script>
+    let box4 = document.getElementById('box4')
+    box4.onclick = function () {
+        alert('This is external event but its old model');
+    }
+
+    const box1 = document.querySelector('#box1');
+    box1.addEventListener('click', function (e) {
+        alert('This is External event and its Best model')
+    }, false)
+
+    // type, timestamp, defaultPrevented
+    // target, toElement, srcElement, currentTarget,
+    // clientX, clientY, screenX, screenY
+    // altkey, ctrlkey, shiftkey, keyCode
+
+    document.getElementById('root').addEventListener('click', function(e) {
+        console.log("Root Element clicked")
+    }, false)
+
+    document.getElementById('box2').addEventListener('click', function(e) {
+        e.stopPropagation()
+        console.log("box two Element clicked")
+    }, false)
+
+    document.getElementById('google').addEventListener('click', function(e) {
+        e.preventDefault()
+        e.stopPropagation()
+        console.log("google two Element clicked")
+    }, false)
+
+    document.getElementById('root').addEventListener('click', function(e){
+        console.log(e.target.className)
+        if(e.target.className === 'box') {
+        let removediv = e.target
+        removediv.remove()
+        }
+    }, false)
+</script>
+
+</html>

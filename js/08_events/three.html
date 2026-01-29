@@ -1,0 +1,27 @@
+<html>
+
+<head>
+    <title>Event | Three</title>
+</head>
+
+<body>
+    <h2>Hello world</h2>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+</body>
+<script>
+    //setInterval(function(){console.log("Hello Abhay")}, 1000)
+
+    document.querySelector('#start').addEventListener('click', function () {
+        const start = setInterval(function () {
+            console.log("Hello Abhay")
+        }, 1000)
+
+        document.querySelector('#stop').addEventListener('click', function () {
+            console.log("stop")
+            clearInterval(start)
+        })
+    })
+</script>
+
+</html>
