@@ -1,0 +1,37 @@
+<html>
+
+<head>
+    <title>OLD API REQUEST</title>
+</head>
+
+<body>
+    0 UNSENT Client has been created. open() not called yet.
+    1 OPENED open() has been called.
+    2 HEADERS_RECEIVED send() has been called, and headers and status are available.
+    3 LOADING Downloading; responseText holds partial data.
+    4 DONE The operation is complete.
+</body>
+<script>
+    const requestUrl = 'https://randomuser.me/api/';
+    const xmls = new XMLHttpRequest();
+    xmls.open('GET', requestUrl)
+    xmls.onreadystatechange = function () {
+        console.log(xmls.readyState)
+        if (xmls.readyState === 4) {
+            const data = JSON.parse(this.responseText)
+            console.log(data)
+            console.log(typeof data)
+            console.log(data.info.seed)
+            data.results.forEach((items) => {
+                console.log(items)
+                console.log(items.email)
+                console.log(items.name.first)
+            })
+
+
+        }
+    }
+    xmls.send();
+</script>
+
+</html>
