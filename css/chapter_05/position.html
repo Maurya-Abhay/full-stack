@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            background-color: red;
+            color: black;
+            height: 10vh;
+            width: 100vw;
+        }
+        .box1{
+            background-color: blue;
+            color: azure;
+            height: 60vh;
+            width: 50vw;
+            position: static;
+        }
+        .box3{
+            background-color: aqua;
+            color: fuchsia;
+            height: 25vh;
+            width: 20vw;
+            position: relative;
+            left: 380px;
+            top: 3px;
+        }
+        .box4{
+            background-color: red;
+            color: black;
+            height: 25vh;
+            width: 20vw;
+            position: relative;
+            /* left: 380px; */
+            top: -140px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">This is a first line</div>
+    <div class="box1">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet vitae saepe ipsam officiis cupiditate quis officia delectus, doloribus adipisci et asperiores nemo reprehenderit recusandae. Esse quos iure nemo autem ipsam corrupti quibusdam aperiam aut soluta magni accusamus ratione, exercitationem molestias consequatur laudantium voluptatibus perspiciatis natus?</p>
+        <div class="box3">This is a box 3</div>
+        <div class="box4">This is a box 4</div>
+    </div>
+</body>
+</html>
