@@ -1,0 +1,29 @@
+body {
+    background-color: darkorange;
+    color: black;
+}
+h1 {
+    background-color: gold;
+    
+}
+button{
+    height: 30px;
+    width: 90px;
+    font-size: 20px;
+    color: aliceblue;
+    background-color: black;
+    border-color: white;
+    border-radius: 5%;
+}
+
+button:hover{
+    transition: 300ms;
+    background-color: red;
+    color: black;
+}
+
+button:active{
+    transition: 30ms;
+    background-color: yellow;
+    color: brown;
+}

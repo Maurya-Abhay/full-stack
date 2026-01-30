@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Java Interview Questions & Answers</title>
+<style>
+  /* Reset */
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 2rem 1rem;
+    background: #f9fafb;
+    color: #222;
+    line-height: 1.6;
+  }
+  h1 {
+    text-align: center;
+    font-weight: 900;
+    font-size: 2.75rem;
+    color: #0a3d62;
+    margin-bottom: 2rem;
+    letter-spacing: 2px;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+  }
+  main {
+    max-width: 900px;
+    margin: 0 auto;
+    background: white;
+    padding: 2.5rem 3rem;
+    border-radius: 14px;
+    box-shadow:
+      0 2.8px 2.2px rgba(0,0,0,0.034),
+      0 6.7px 5.3px rgba(0,0,0,0.048),
+      0 12.5px 10px rgba(0,0,0,0.06),
+      0 22.3px 17.9px rgba(0,0,0,0.072),
+      0 41.8px 33.4px rgba(0,0,0,0.086),
+      0 100px 80px rgba(0,0,0,0.12);
+  }
+  section {
+    margin-bottom: 2rem;
+    border-left: 6px solid #0984e3;
+    padding-left: 1.25rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #0984e3;
+    margin-bottom: 0.5rem;
+    user-select: none;
+  }
+  p {
+    font-size: 1rem;
+    color: #333;
+    margin-top: 0.2rem;
+    margin-bottom: 0.85rem;
+  }
+  em {
+    font-style: italic;
+    color: #636e72;
+  }
+  ul {
+    margin-top: 0.2rem;
+    margin-bottom: 0.85rem;
+    padding-left: 1.5rem;
+  }
+  li {
+    margin-bottom: 0.45rem;
+  }
+  @media (max-width: 600px) {
+    body {
+      padding: 1rem 0.75rem;
+    }
+    main {
+      padding: 1.5rem 1.25rem;
+      border-radius: 10px;
+    }
+    h1 {
+      font-size: 2rem;
+      letter-spacing: 1.5px;
+      margin-bottom: 1.5rem;
+    }
+    section {
+      margin-bottom: 1.5rem;
+      padding-left: 1rem;
+      border-left-width: 4px;
+    }
+    h2 {
+      font-size: 1.2rem;
+    }
+    p, li {
+      font-size: 0.95rem;
+    }
+  }
+</style>
+</head>
+<body>
+<h1>Java Interview Questions & Answers</h1>
+<main>
+  <section>
+    <h2>1. What is JDK, JRE, and JVM?</h2>
+    <p><strong>JDK (Java Development Kit):</strong> A full-featured software development kit used to develop Java applications. It includes the JRE plus development tools like the compiler and debugger.</p>
+    <p><strong>JRE (Java Runtime Environment):</strong> The environment required to run Java applications. It includes JVM and standard Java class libraries.</p>
+    <p><strong>JVM (Java Virtual Machine):</strong> A virtual machine that executes Java bytecode, providing platform independence.</p>
+  </section>
+
+  <section>
+    <h2>2. What is Java?</h2>
+    <p>Java is a high-level, object-oriented programming language designed for portability and platform independence. It's widely used for web, mobile, and enterprise applications.</p>
+  </section>
+
+  <section>
+    <h2>3. What are data types in Java?</h2>
+    <p>Java has two categories of data types:</p>
+    <ul>
+      <li><strong>Primitive data types:</strong> byte, short, int, long, float, double, boolean, char.</li>
+      <li><strong>Reference/Object types:</strong> Instances of classes, arrays, and interfaces.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>4. What is a variable?</h2>
+    <p>A variable is a named storage location in memory that holds data. Java variables must be declared with a data type and can be initialized with a value. Types include local, instance, and class (static) variables.</p>
+  </section>
+
+  <section>
+    <h2>5. What are looping statements?</h2>
+    <p>Looping statements repeat a block of code while a condition is true:</p>
+    <ul>
+      <li><strong>for loop:</strong> Executes code a specific number of times.</li>
+      <li><strong>while loop:</strong> Executes code while the condition remains true.</li>
+      <li><strong>do-while loop:</strong> Executes code at least once, then repeats while true.</li>
+      <li><strong>enhanced for loop:</strong> Used to iterate over arrays or collections.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>6. What are conditional statements?</h2>
+    <p>Conditional statements control program flow based on conditions:</p>
+    <ul>
+      <li><strong>if statement:</strong> Executes a block if a condition is true.</li>
+      <li><strong>if-else statement:</strong> Executes code blocks based on true/false.</li>
+      <li><strong>switch statement:</strong> Selects one of many blocks based on a value.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>7. What is an array?</h2>
+    <p>An array is a container object that holds a fixed number of values of the same type. Elements are accessed by index, starting at 0. Arrays can be single or multi-dimensional.</p>
+  </section>
+
+  <section>
+    <h2>8. What is a String?</h2>
+    <p>A String is an object in Java that represents a sequence of characters. It is immutable, meaning once created, it cannot be changed. Common methods include <em>length()</em>, <em>substring()</em>, and <em>equals()</em>.</p>
+  </section>
+
+  <section>
+    <h2>9. What are methods?</h2>
+    <p>Methods are blocks of code that perform specific tasks, defined inside classes. They can take parameters, return values, and be overloaded or overridden.</p>
+  </section>
+
+  <section>
+    <h2>10. What are operators?</h2>
+    <p>Operators are symbols that perform operations on variables and values. Types include:</p>
+    <ul>
+      <li>Arithmetic: +, -, *, /, %</li>
+      <li>Relational: ==, !=, &gt;, &lt;, &gt;=, &lt;=</li>
+      <li>Logical: &&, ||, !</li>
+      <li>Bitwise: &, |, ^, ~, &lt;&lt;, &gt;&gt;, &gt;&gt;&gt;</li>
+      <li>Assignment: =, +=, -=, etc.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>11. What are keywords?</h2>
+    <p>Keywords are reserved words that have predefined meanings in Java syntax, such as <em>class</em>, <em>public</em>, <em>static</em>, <em>void</em>, <em>if</em>, <em>else</em>, <em>new</em>, and more.</p>
+  </section>
+
+  <section>
+    <h2>12. What are classes and objects?</h2>
+    <p>A class is a blueprint/template for creating objects. It defines data (fields) and behaviors (methods).</p>
+    <p>An object is an instance of a class containing actual values and state.</p>
+  </section>
+
+  <section>
+    <h2>13. What is a constructor?</h2>
+    <p>A constructor is a special method used to initialize new objects. It has the same name as the class and no return type.</p>
+  </section>
+
+  <section>
+    <h2>14. What is inheritance?</h2>
+    <p>Inheritance is a mechanism where one class acquires the properties and behaviors (methods) of another class, promoting code reuse.</p>
+  </section>
+
+  <section>
+    <h2>15. What is polymorphism?</h2>
+    <p>Polymorphism allows objects to be treated as instances of their parent class rather than their actual class. It enables methods to perform differently based on the object's actual subclass.</p>
+  </section>
+
+  <section>
+    <h2>16. What is encapsulation?</h2>
+    <p>Encapsulation is the practice of hiding internal object details and exposing only what's necessary through public methods, improving modularity and security.</p>
+  </section>
+
+  <section>
+    <h2>17. What is exception handling?</h2>
+    <p>Exception handling is a construct to manage runtime errors using <em>try</em>, <em>catch</em>, <em>finally</em>, and <em>throw</em> to gracefully handle error conditions and maintain program flow.</p>
+  </section>
+</main>
+</body>
+</html>
+
